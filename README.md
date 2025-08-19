@@ -136,7 +136,7 @@ Once deployed, you’ll get a public endpoint like:
 https://mnist-api-xxxxx.a.run.app/predict
 ```
 
-### Test
+### 5. Test
 
 #### Method 1
 Use Swagger UI.  
@@ -190,6 +190,8 @@ mnist-api/
 - Convert to REST + Web UI hybrid
 - Add GitHub Actions for CI/CD
 - Deploy multiple models (e.g., CIFAR, fashion-MNIST)
+
+---
 
 Here is my blog, there are more details about this project:  
 https://myblog-alpha-umber.vercel.app/blog/mnist_api
