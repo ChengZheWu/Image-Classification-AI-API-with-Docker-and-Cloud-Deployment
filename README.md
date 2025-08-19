@@ -178,5 +178,5 @@ mnist-api/
 - Add GitHub Actions for CI/CD
 - Deploy multiple models (e.g., CIFAR, fashion-MNIST)
 
-Here is my blog, there are more details about this project:
+Here is my blog, there are more details about this project:  
 https://myblog-alpha-umber.vercel.app/blog/ai_api#install-docker-desktop
