@@ -130,23 +130,20 @@ gcloud builds submit --tag asia-east1-docker.pkg.dev/mnist-api-469005/mnist-repo
 gcloud run deploy mnist-api --image=asia-east1-docker.pkg.dev/mnist-api-469005/mnist-repo/mnist-api --platform=managed --region=asia-east1 --allow-unauthenticated --project=mnist-api-469005 --memory=1Gi
 ```
 
-Once deployed, you’ll get a public endpoint like:
-
-```
-https://mnist-api-xxxxx.a.run.app/predict
-```
+Once deployed, we'll get a URL:
+https://mnist-api-833902309721.asia-east1.run.app (This is mine)
 
 ### 5. Test
 
 #### Method 1
 Use Swagger UI.  
-The URL would be https://mnist-api-xxxxx.a.run.app/predict/docs
+The URL would be https://mnist-api-833902309721.asia-east1.run.app/docs
 Use the previous Example Usage for input.
 
 #### Method 2
 Use Windows cmd line.  
 ```bash
-curl -X POST https://mnist-api-xxxxx.a.run.app/predict ^
+curl -X POST https://mnist-api-833902309721.asia-east1.run.app/predict ^
   -H "Content-Type: application/json" ^
   -d "{\"image_base64\": \"iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAA6ElEQVR4nGNgGMyAWUhIqK5jvdSy/9/rQXwWmIQcm5WNQDCI9WRS4OeLB0EsRqic4V5+KOtf0leGZ+9vIpsodPsvCBzb9v0jFvsC5mT//XuWm0F7FjbX8DHO+huFKsQEZ336/5EhBcFFB9z7/rrh9qfyx4cLcmDuxwCBH/7+LZfEJau76+/fadK4ZAVi//zdjdvin39/OkCZLKgyeiGmLAzXDmHTpD7l6d+/f39twyIlUXQXFLwn/TClxJ2ugkM+EDOQhFaDY+VwACeGlPmaRyCpL63cqOJg1wYGMjBc3/y35wNuD1ITAABFF16AbmkxawAAAABJRU5ErkJggg==\"}"
 ```
