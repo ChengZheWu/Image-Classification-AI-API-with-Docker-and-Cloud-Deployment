@@ -99,7 +99,7 @@ docker run -p 8080:8080 mnist-api
 
 Office Website: https://cloud.google.com/sdk/docs/install
 
-### 2. 
+### 2. Prerequisite
 ```bash
 gcloud auth login
 
@@ -111,7 +111,14 @@ gcloud config set run/region asia-east1
 gcloud services enable run.googleapis.com artifactregistry.googleapis.com
 ```
 
-### Deployment
+### 3. Verify if login and project setup are successful (Optional)
+
+```bash
+gcloud auth list
+gcloud config list project
+```
+
+### 4. Deployment
 
 ```bash
 gcloud artifacts repositories create mnist-repo --repository-format=docker --location=asia-east1 --project=mnist-api-469005 --description="MNIST API Repo"
