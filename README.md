@@ -36,7 +36,7 @@ pip install -r requirements.txt
 python -m train.train_model
 ```
 
-### 4. Run the API locally
+### 4. Run the API locally (Optional)
 
 ```bash
 uvicorn app.main:app --reload
@@ -71,13 +71,21 @@ Open the Swagger UI for interactive testing:
 
 ## Docker Deployment
 
-### Build Docker Image
+### 1. Install Docker Desktop
+
+Official Website: https://www.docker.com/products/docker-desktop/
+
+### 2. Create Dockerfile and .dockignore
+
+There are already a Dickerfile and .dockignore in the repositery.
+
+### 3. Build Docker Image
 
 ```bash
 docker build -t mnist-api .
 ```
 
-### Run Docker Locally
+### 4. Run Docker Locally (Optional)
 
 ```bash
 docker run -p 8080:8080 mnist-api
@@ -87,8 +95,11 @@ docker run -p 8080:8080 mnist-api
 
 ## Deploy to Google Cloud Run
 
-### Prerequisite
+### 1. Install gcloud CLI (Google Cloud SDK)
 
+Office Website: https://cloud.google.com/sdk/docs/install
+
+### 2. 
 ```bash
 gcloud auth login
 
@@ -107,9 +118,7 @@ gcloud artifacts repositories create mnist-repo --repository-format=docker --loc
 
 gcloud auth configure-docker asia-east1-docker.pkg.dev
 
-docker build -t asia-east1-docker.pkg.dev/mnist-api-469005/mnist-repo/mnist-api .
-
-docker push asia-east1-docker.pkg.dev/mnist-api-469005/mnist-repo/mnist-api
+gcloud builds submit --tag asia-east1-docker.pkg.dev/mnist-api-469005/mnist-repo/mnist-api
 
 gcloud run deploy mnist-api --image=asia-east1-docker.pkg.dev/mnist-api-469005/mnist-repo/mnist-api --platform=managed --region=asia-east1 --allow-unauthenticated --project=mnist-api-469005 --memory=1Gi
 ```
