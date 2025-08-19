@@ -131,13 +131,19 @@ https://mnist-api-xxxxx.a.run.app/predict
 
 ### Test
 
-The answer is 5.
+#### Method 1
+Use Swagger UI.  
+The URL would be https://mnist-api-xxxxx.a.run.app/predict/docs
+Use the previous Example Usage for input.
 
+#### Method 2
+Use Windows cmd line.  
 ```bash
 curl -X POST https://mnist-api-xxxxx.a.run.app/predict ^
   -H "Content-Type: application/json" ^
   -d "{\"image_base64\": \"iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAA6ElEQVR4nGNgGMyAWUhIqK5jvdSy/9/rQXwWmIQcm5WNQDCI9WRS4OeLB0EsRqic4V5+KOtf0leGZ+9vIpsodPsvCBzb9v0jFvsC5mT//XuWm0F7FjbX8DHO+huFKsQEZ336/5EhBcFFB9z7/rrh9qfyx4cLcmDuxwCBH/7+LZfEJau76+/fadK4ZAVi//zdjdvin39/OkCZLKgyeiGmLAzXDmHTpD7l6d+/f39twyIlUXQXFLwn/TClxJ2ugkM+EDOQhFaDY+VwACeGlPmaRyCpL63cqOJg1wYGMjBc3/y35wNuD1ITAABFF16AbmkxawAAAABJRU5ErkJggg==\"}"
 ```
+The answer is 5.  
 
 ---
 
@@ -179,4 +185,4 @@ mnist-api/
 - Deploy multiple models (e.g., CIFAR, fashion-MNIST)
 
 Here is my blog, there are more details about this project:  
-https://myblog-alpha-umber.vercel.app/blog/ai_api#install-docker-desktop
+https://myblog-alpha-umber.vercel.app/blog/mnist_api
