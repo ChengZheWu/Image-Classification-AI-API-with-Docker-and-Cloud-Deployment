@@ -190,5 +190,13 @@ mnist-api/
 
 ---
 
+## Notes
+
+This project was built as a side project to practice software development and document my learning journey.  
+Some parts of the code were assisted by AI tools (e.g., ChatGPT) to help with coding, debugging, and optimization.  
+All code has been reviewed and adapted to fit the goals of this project.
+
+---
+
 Here is my blog, there are more details about this project:  
 https://myblog-alpha-umber.vercel.app/blog/mnist_api
